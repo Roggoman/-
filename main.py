@@ -10,7 +10,7 @@ def index():
 
 @app.route('/training/<prof>')
 def train(prof):
-    flag = True if prof in ["инженер", "строитель"] else False
+    flag = True if "инженер" in prof or "строитель" in prof else False
     return render_template('training.html', title=prof, flag=flag)
 
 
